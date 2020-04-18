@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
+import Principal from './components/Principal';
 import './App.css';
+import Particles from 'react-particles-js';
 
+const ParticleOpt = {
+  particles : {
+    number: {
+      value: 150,
+      density:{
+        enable: true,
+        value_area: 800
+      }
+    }
+
+  }
+}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Particles params={ParticleOpt} class="hola"/>
+        <div class="prueba">
+          <Principal/>
+        </div>
+
     </div>
   );
 }
